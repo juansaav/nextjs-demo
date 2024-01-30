@@ -1,4 +1,4 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+This is a sample Next.js blog that covers the basic concepts.
 
 # Topics
 - Introduction to Next.js
