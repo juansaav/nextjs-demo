@@ -7,7 +7,7 @@ jest.mock('next/router', () => ({
   useRouter: jest.fn(),
 }));
 
-// mock the login service
+// Mock the login service
 global.fetch = jest.fn(() =>
   Promise.resolve({
     ok: true,
