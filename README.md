@@ -6,10 +6,10 @@ This is a starter template for [Learn Next.js](https://nextjs.org/learn).
 - Client-Side Navigation
 - Assets, Metadata, and CSS
 - Pre-rendering and Data Fetching
- - SSR vs SSG 
- - Static Generation with and without Data
- - getStaticProps
+  - SSR vs SSG 
+  - Static Generation with and without Data
+  - getStaticProps
 - Dynamic routes
- - getStaticPaths
- - getStaticProps
- - Render markdown
+  - getStaticPaths
+  - getStaticProps
+  - Render markdown
