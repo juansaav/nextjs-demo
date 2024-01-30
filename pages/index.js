@@ -5,6 +5,8 @@ import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
+import { useEffect, useState } from 'react';
+import styles from '../styles/home.module.css'; 
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -16,14 +18,31 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData }) {
+  const [username, setUsername] = useState(null);
+  useEffect(() => {
+    // Retrieve username from localStorage
+    const storedUsername = localStorage.getItem('username');
+    if (!!storedUsername) {
+      setUsername(storedUsername);
+    }
+  }, []);
   return (
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>Please find below the list of blogs generated using SSR</p>
+        <div className={styles.userInfo}>
+          {username ? (
+            <p>
+              Welcome back, <span className={styles.username}>{username}</span>!
+            </p>
+          ) : (
+            <Link href={`/login`}>Login</Link>
+          )}
+        </div>
       </section>
+      <p>Please find below the list of blogs generated using SSR</p>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
@@ -37,9 +56,6 @@ export default function Home({ allPostsData }) {
             </li>
           ))}
         </ul>
-      </section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <Link href={`/login`}>Login</Link>
       </section>
     </Layout>
   );
