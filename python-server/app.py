@@ -20,7 +20,7 @@ def login():
         expiration_time = datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(hours=1)
         token = jwt.encode({'username': data['username'], 'exp': expiration_time}, secret_key, algorithm='HS256')
 
-        return jsonify({'token': token}), 200
+        return jsonify({'token': token, 'username': 'Juan'}), 200
     else:
         return jsonify({'error': 'Invalid username or password'}), 401
 
