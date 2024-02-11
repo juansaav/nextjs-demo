@@ -7,9 +7,11 @@
     "test": "jest"
   },
   "dependencies": {
+    "@mistralai/mistralai": "^0.0.10",
     "date-fns": "^3.3.1",
     "gray-matter": "^4.0.3",
     "next": "latest",
+    "openai": "^4.27.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "remark": "^15.0.1",

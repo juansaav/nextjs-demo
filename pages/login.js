@@ -34,6 +34,7 @@ export default function Login() {
 
       if (response.ok) {
         const data = await response.json();
+
         // todo [task-id]: use redux to store 
         localStorage.setItem('token', data.token);
         localStorage.setItem('username', data.username);
