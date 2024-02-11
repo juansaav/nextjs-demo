@@ -12,6 +12,7 @@ const NewPost = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [suggestedTopics, setSuggestedTopics] = useState('');
+  const [loadingSuggestions, setLoadingSuggestions] = useState(false);
 
   const handleDescriptionChange = (event) => {
     setDescription(event.target.value);
@@ -22,15 +23,18 @@ const NewPost = () => {
   };
 
   const getSuggestedTopics = async (title) => {
+    setLoadingSuggestions(true);
     try {
       console.log('call api')
       const chatResponse = await client.chat({
         model: 'mistral-tiny',
         messages: [{ role: 'user', content: `Suggest topics for this title for a blog: ${title}` }],
       });
+      setLoadingSuggestions(false);
       return chatResponse.choices[0].message.content;
     } catch (error) {
       console.error('Error fetching suggested topics:', error);
+      setLoadingSuggestions(false);
       return '';
     }
   };
@@ -39,14 +43,16 @@ const NewPost = () => {
     debounce(async (value) => {
       const suggestedTopics = await getSuggestedTopics(value);
       setSuggestedTopics(suggestedTopics);
-    }, 200),
+    }, 400),
     []
   );
 
   const handleTitleChange = (event) => {
     const { value } = event.target;
     setTitle(value);
-    debouncedFetchData(value);
+    if (value) {
+      debouncedFetchData(value);
+    }
   };
 
   return (
@@ -79,18 +85,27 @@ const NewPost = () => {
             />
           </div>
           <div style={{ marginTop: 30 }}>
-            {suggestedTopics?.length > 0 && (
+            {loadingSuggestions ? ( // Render spinner if loading
               <div>
-                <label>Suggested Topics:</label>
-                <ul>
-                  {suggestedTopics.split('\n').map((line, index) => (
-                    <li key={index}>{line}</li>
-                  ))}
-                </ul>
+                  Loading topics..
               </div>
+            ) : (
+              suggestedTopics?.length > 0 && (
+                <div>
+                  <label>Suggested Topics:</label>
+                  <ul>
+                    {suggestedTopics
+                      .split("\n")
+                      .filter((x) => x !== "")
+                      .map((line, index) => (
+                        <li key={index}>{line}</li>
+                      ))}
+                  </ul>
+                </div>
+              )
             )}
           </div>
-          <button type="submit">Submit</button>
+          {/* <button type="submit">Submit</button> */}
         </form>
       </div>
     </Layout>
