@@ -18,6 +18,7 @@ const SuggestTagsEmails = () => {
   const getSuggestedTopics = async (descriptionPar) => {
     try {
       console.log('call api')
+      console.log(JSON.stringify(posts.map(post => post.tags)))
       const chatResponse = await client.chat({
         model: "mistral-tiny",
         messages: [
@@ -25,17 +26,36 @@ const SuggestTagsEmails = () => {
             role: "user",
             content: `
         You are an expert at analyzing data.
-        I'll send you below data about posts (List of posts) and users (List of users). 
-        Each post has a title, description, tags (list of tags related to its content) and a userEmail (corresponds to the user that created it). 
-        Also each user has a posts attribute, which has the titles of the posts they have created. 
-        And a likedPosts attribute, which corresponds to the posts the user has liked.
-        Apart from that, I'm going to send you the description (New post description) that is going to be created, you have to use this information to relate it with the existing posts and users data.
-        Data:
+        I'll send you below existing data about posts (List of posts) and users (List of users) and list of tags (List of tags). 
+        Each post has a 'title', 'description', 'tags' (list of tags related to its content) and a 'userEmail' (corresponds to the user that created it). 
+        Also each user has a 'posts' attribute, which has the titles of the posts they have created and a 'likedPosts' attribute, which corresponds to the posts the user has liked.
+        Apart from that, I'm going to send you the description of a post (New post description) that is going to be created, you have to use this information to relate it with the existing posts and users data.
+        ###
+        Parameters:
         List of users: ${JSON.stringify(users)}
         List of posts: ${JSON.stringify(posts)}
+        List of tags: ${JSON.stringify(posts.map(post => post.tags))}
         New post description: ${descriptionPar}
-        Please respond with a JSON object with two properties (and do not include any explanation): 
-        1- tags, which is a list of strings containing the tags related to the new posts that already exist and a few new tags that you suggest if necessary (please append the word '(new)' to these new tags).
+        ###
+        Please respond with a JSON object with two properties: 
+        1- tags, which is a sublist of the 'List of tags' parameter, and related to the new post. If there are no tags related, come up with two new tags prefixed with the word 'new'.
+        ####
+        Here are some examples only for tags:
+        1)
+        List of tags: 'blue', 'red', 'green'
+        New post description: 'This is a Toyota blue car. I bought it in SF.'
+
+        Response: {
+          tags: ['blue', '(new) Toyota', '(new) SF']
+        }
+        2)
+        List of tags: 'blue', 'red', 'green'
+        New post description: 'Discover the vibrant and diverse bird species found in the Amazon rainforest.'
+
+        Response: {
+          tags: ["birds", "Amazon", "exotic"]
+        }
+        ###
         2- emails, a list of emails of the users that might be interested in this post, either because they created a similar post or liked a similar post.
         If you can't relate an email or a tag, please don't include it in the response (excepting the new tags). Please respond only with the JSON, don't include any explanation.
         `,
@@ -48,14 +68,14 @@ const SuggestTagsEmails = () => {
       setSuggestedUsers(responseData.emails);
     } catch (error) {
       console.error('Error fetching suggested topics:', error);
-      setLoadingSuggestions(false);
       return '';
     }
   };
 
   const debouncedFetchData = useCallback(
     debounce(async (description) => {
-      setSuggestedTags('');
+      setSuggestedTags([]);
+      setSuggestedUsers([]);
       const suggestedTopics = await getSuggestedTopics(description);
     }, 400),
     []
