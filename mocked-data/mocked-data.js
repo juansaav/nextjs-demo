@@ -119,6 +119,10 @@ export const users = [
 ];
 
 export const posts = [
+
+  /////////// ANIMALS
+
+
   {
     title: "Cute Kittens Playing",
     description: "Watch these adorable kittens playing with yarn!",
@@ -324,5 +328,300 @@ export const posts = [
       "Join efforts to protect and conserve endangered penguin species.",
     tags: ["penguins", "conservation", "endangered species"],
     userEmail: "user10@example.com",
+  },
+
+
+  /////////// CARS
+
+  {
+    "title": "Vintage Cars Exhibition",
+    "description": "Explore a collection of classic vintage cars from different eras.",
+    "tags": ["cars", "vintage", "exhibition"],
+    "userEmail": "user1@example.com"
+  },
+  {
+    "title": "Tips for Maintaining Your Sports Car",
+    "description": "Learn essential maintenance tips to keep your sports car in top condition.",
+    "tags": ["cars", "sports cars", "maintenance"],
+    "userEmail": "user2@example.com"
+  },
+  {
+    "title": "Luxury Sedans: A Comparison Guide",
+    "description": "Compare features and performance of various luxury sedan models.",
+    "tags": ["cars", "luxury sedans", "comparison"],
+    "userEmail": "user3@example.com"
+  },
+  {
+    "title": "Off-Roading Adventures: Best SUVs for the Terrain",
+    "description": "Discover the best SUV models suited for off-roading adventures.",
+    "tags": ["cars", "SUVs", "off-roading"],
+    "userEmail": "user4@example.com"
+  },
+  {
+    "title": "Electric Cars: The Future of Automobiles",
+    "description": "Explore the advancements and benefits of electric cars for a sustainable future.",
+    "tags": ["cars", "electric cars", "sustainability"],
+    "userEmail": "user5@example.com"
+  },
+  {
+    "title": "Classic Muscle Cars: A History",
+    "description": "Dive into the rich history of classic muscle cars and their impact on automotive culture.",
+    "tags": ["cars", "muscle cars", "history"],
+    "userEmail": "user6@example.com"
+  },
+  {
+    "title": "Safety Features in Modern Vehicles",
+    "description": "Learn about the latest safety technologies implemented in modern vehicles.",
+    "tags": ["cars", "safety", "technology"],
+    "userEmail": "user7@example.com"
+  },
+  {
+    "title": "Convertible Cars: Enjoying the Open Road",
+    "description": "Experience the freedom of driving with the top down in convertible cars.",
+    "tags": ["cars", "convertibles", "open road"],
+    "userEmail": "user8@example.com"
+  },
+  {
+    "title": "DIY Car Maintenance: Basic Tips for Every Driver",
+    "description": "Empower yourself with basic car maintenance skills to save time and money.",
+    "tags": ["cars", "maintenance", "DIY"],
+    "userEmail": "user9@example.com"
+  },
+  {
+    "title": "Customizing Your Ride: Personalization Options for Cars",
+    "description": "Explore various ways to personalize and customize your car to reflect your style.",
+    "tags": ["cars", "customization", "personalization"],
+    "userEmail": "user10@example.com"
+  },
+  {
+    "title": "Racing Cars: Behind the Scenes",
+    "description": "Get an insider's look into the world of professional racing cars and their engineering.",
+    "tags": ["cars", "racing", "engineering"],
+    "userEmail": "user1@example.com"
+  },
+  {
+    "title": "The Evolution of Hybrid Cars",
+    "description": "Trace the evolution and technological advancements of hybrid cars over the years.",
+    "tags": ["cars", "hybrids", "evolution"],
+    "userEmail": "user2@example.com"
+  },
+  {
+    "title": "Driving Safely in Winter Conditions",
+    "description": "Learn essential tips for driving safely in snowy and icy winter conditions.",
+    "tags": ["cars", "winter driving", "safety"],
+    "userEmail": "user3@example.com"
+  },
+  {
+    "title": "Adventures with 4x4 Trucks",
+    "description": "Embark on thrilling adventures with rugged 4x4 trucks built for the toughest terrains.",
+    "tags": ["cars", "4x4 trucks", "adventures"],
+    "userEmail": "user4@example.com"
+  },
+  {
+    "title": "The Future of Autonomous Vehicles",
+    "description": "Explore the potential of autonomous vehicles and their impact on transportation.",
+    "tags": ["cars", "autonomous vehicles", "future"],
+    "userEmail": "user5@example.com"
+  },
+  {
+    "title": "Vintage Car Restoration: Preserving Automotive History",
+    "description": "Discover the art and challenges of restoring vintage cars to their former glory.",
+    "tags": ["cars", "restoration", "vintage"],
+    "userEmail": "user6@example.com"
+  },
+  {
+    "title": "Essential Car Accessories Every Driver Should Have",
+    "description": "Find out about essential accessories that can enhance your driving experience.",
+    "tags": ["cars", "accessories", "drivers"],
+    "userEmail": "user7@example.com"
+  },
+  {
+    "title": "Family-Friendly Cars: Choosing the Right Model",
+    "description": "Tips for selecting the perfect family-friendly car that meets your needs.",
+    "tags": ["cars", "family cars", "tips"],
+    "userEmail": "user8@example.com"
+  },
+  {
+    "title": "Road Trip Essentials: Packing Tips for Long Drives",
+    "description": "Ensure a smooth and enjoyable road trip with these essential packing tips.",
+    "tags": ["cars", "road trips", "packing"],
+    "userEmail": "user9@example.com"
+  },
+  {
+    "title": "Urban Commuting: Best Cars for City Living",
+    "description": "Discover the most suitable cars for navigating city streets and urban environments.",
+    "tags": ["cars", "urban commuting", "city living"],
+    "userEmail": "user10@example.com"
+  },
+  {
+    "title": "The Art of Car Detailing",
+    "description": "Learn the techniques and products used to achieve a professionally detailed car.",
+    "tags": ["cars", "detailing", "techniques"],
+    "userEmail": "user1@example.com"
+  },
+  {
+    "title": "Eco-Friendly Cars: Reducing Your Carbon Footprint",
+    "description": "Discover eco-friendly car options that help reduce emissions and environmental impact.",
+    "tags": ["cars", "eco-friendly", "environment"],
+    "userEmail": "user2@example.com"
+  },
+  {
+    "title": "Navigating Traffic Jams: Tips for Stress-Free Driving",
+    "description": "Stay calm and navigate through traffic jams with these helpful tips.",
+    "tags": ["cars", "traffic", "driving tips"],
+    "userEmail": "user3@example.com"
+  },
+  {
+    "title": "Choosing the Right Tires for Your Vehicle",
+    "description": "Understand the importance of selecting the right tires for your car and driving conditions.",
+    "tags": ["cars", "tires", "selection"],
+    "userEmail": "user4@example.com"
+  },
+
+  ///////////////// FOOD
+
+  {
+    "title": "Delicious Pasta Recipes",
+    "description": "Explore a variety of mouthwatering pasta recipes for every occasion.",
+    "tags": ["food", "pasta", "recipes"],
+    "userEmail": "user1@example.com"
+  },
+  {
+    "title": "Healthy Smoothie Ideas",
+    "description": "Discover nutritious and tasty smoothie recipes to kickstart your day.",
+    "tags": ["food", "smoothies", "healthy"],
+    "userEmail": "user2@example.com"
+  },
+  {
+    "title": "International Cuisine: A Culinary Journey",
+    "description": "Embark on a culinary adventure with diverse international dishes.",
+    "tags": ["food", "international cuisine", "culinary"],
+    "userEmail": "user3@example.com"
+  },
+  {
+    "title": "Grilling Tips for Perfect BBQ",
+    "description": "Master the art of grilling with expert tips for the perfect BBQ experience.",
+    "tags": ["food", "grilling", "BBQ"],
+    "userEmail": "user4@example.com"
+  },
+  {
+    "title": "Vegetarian Cooking Made Easy",
+    "description": "Learn simple and delicious vegetarian recipes for every meal.",
+    "tags": ["food", "vegetarian", "cooking"],
+    "userEmail": "user5@example.com"
+  },
+  {
+    "title": "Decadent Desserts: Indulge Your Sweet Tooth",
+    "description": "Satisfy your cravings with decadent dessert recipes that are sure to please.",
+    "tags": ["food", "desserts", "indulgence"],
+    "userEmail": "user6@example.com"
+  },
+  {
+    "title": "Farm-to-Table Dining: Fresh and Local",
+    "description": "Experience the freshness of farm-to-table dining with locally sourced ingredients.",
+    "tags": ["food", "farm-to-table", "local"],
+    "userEmail": "user7@example.com"
+  },
+  {
+    "title": "Baking Bread at Home: Tips and Techniques",
+    "description": "Discover the joy of baking bread at home with expert tips and techniques.",
+    "tags": ["food", "baking", "bread"],
+    "userEmail": "user8@example.com"
+  },
+  {
+    "title": "Quick and Easy Weeknight Meals",
+    "description": "Simplify your weeknight dinners with quick and easy meal ideas.",
+    "tags": ["food", "weeknight meals", "quick"],
+    "userEmail": "user9@example.com"
+  },
+  {
+    "title": "Gourmet Pizza Creations",
+    "description": "Elevate your pizza game with gourmet toppings and flavor combinations.",
+    "tags": ["food", "pizza", "gourmet"],
+    "userEmail": "user10@example.com"
+  },
+  {
+    "title": "The Art of Sushi Making",
+    "description": "Learn the techniques and traditions behind the art of sushi making.",
+    "tags": ["food", "sushi", "Japanese cuisine"],
+    "userEmail": "user1@example.com"
+  },
+  {
+    "title": "Budget-Friendly Meal Planning",
+    "description": "Save time and money with budget-friendly meal planning strategies.",
+    "tags": ["food", "meal planning", "budget-friendly"],
+    "userEmail": "user2@example.com"
+  },
+  {
+    "title": "Spice Up Your Cooking with Indian Flavors",
+    "description": "Discover the vibrant and aromatic flavors of Indian cuisine in your own kitchen.",
+    "tags": ["food", "Indian cuisine", "spices"],
+    "userEmail": "user3@example.com"
+  },
+  {
+    "title": "Homemade Pasta: From Scratch to Plate",
+    "description": "Experience the satisfaction of making homemade pasta from scratch.",
+    "tags": ["food", "pasta", "homemade"],
+    "userEmail": "user4@example.com"
+  },
+  {
+    "title": "Healthy Snack Ideas for On-the-Go",
+    "description": "Stay energized throughout the day with healthy snack options for on-the-go lifestyles.",
+    "tags": ["food", "snacks", "healthy"],
+    "userEmail": "user5@example.com"
+  },
+  {
+    "title": "Traditional Mexican Cuisine: Flavorful and Authentic",
+    "description": "Explore the rich and diverse flavors of traditional Mexican dishes.",
+    "tags": ["food", "Mexican cuisine", "authentic"],
+    "userEmail": "user6@example.com"
+  },
+  {
+    "title": "The Ultimate Guide to Wine Pairing",
+    "description": "Enhance your dining experience with expert wine pairing recommendations for every dish.",
+    "tags": ["food", "wine pairing", "guide"],
+    "userEmail": "user7@example.com"
+  },
+  {
+    "title": "Comfort Food Classics: Nostalgic Recipes",
+    "description": "Rediscover the warmth and nostalgia of comfort food classics with timeless recipes.",
+    "tags": ["food", "comfort food", "classics"],
+    "userEmail": "user8@example.com"
+  },
+  {
+    "title": "Healthy Breakfast Ideas to Start Your Day Right",
+    "description": "Fuel your day with nutritious and satisfying breakfast options.",
+    "tags": ["food", "breakfast", "healthy"],
+    "userEmail": "user9@example.com"
+  },
+  {
+    "title": "Exotic Fruit Tasting Experience",
+    "description": "Expand your palate with an exotic fruit tasting experience featuring unique and tropical flavors.",
+    "tags": ["food", "fruits", "exotic"],
+    "userEmail": "user10@example.com"
+  },
+  {
+    "title": "Plant-Based Cooking: Delicious Vegan Recipes",
+    "description": "Discover the versatility and flavor of plant-based cooking with delicious vegan recipes.",
+    "tags": ["food", "vegan", "plant-based"],
+    "userEmail": "user1@example.com"
+  },
+  {
+    "title": "Healthy Cooking for Busy Professionals",
+    "description": "Master the art of healthy cooking with simple and nutritious recipes for busy schedules.",
+    "tags": ["food", "healthy cooking", "busy professionals"],
+    "userEmail": "user2@example.com"
+  },
+  {
+    "title": "Exploring Mediterranean Cuisine",
+    "description": "Journey through the Mediterranean with flavorful dishes inspired by the region's culinary traditions.",
+    "tags": ["food", "Mediterranean cuisine", "flavors"],
+    "userEmail": "user3@example.com"
+  },
+  {
+    "title": "Homemade Ice Cream: Churn Your Own Treats",
+    "description": "Beat the heat with homemade ice cream recipes that are sure to delight.",
+    "tags": ["food", "ice cream", "homemade"],
+    "userEmail": "user4@example.com"
   },
 ];
