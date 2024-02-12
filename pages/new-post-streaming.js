@@ -30,7 +30,7 @@ const NewPostStreaming = () => {
           {
             role: "user",
             content: `You are an expert at writing blogs.
-                      I want you to suggest 10 topics for this new blog with the following title: ${title}.
+                      I want you to suggest 50 topics for this new blog with the following title: ${title}.
                       The response must be a list of strings. Don't wrap each suggestion with quotes.
                       ###
                       Here are some examples for the title 'Animals':
