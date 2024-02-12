@@ -11,7 +11,7 @@ const client = new MistralClient(apiKey);
 const NewPost = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  const [suggestedTopics, setSuggestedTopics] = useState('');
+  const [suggestedTopics, setSuggestedTopics] = useState([]);
   const [loadingSuggestions, setLoadingSuggestions] = useState(false);
 
   const handleDescriptionChange = (event) => {
@@ -27,8 +27,15 @@ const NewPost = () => {
     try {
       console.log('call api')
       const chatResponse = await client.chat({
-        model: 'mistral-tiny',
-        messages: [{ role: 'user', content: `Suggest topics for this title for a blog: ${title}` }],
+        model: "mistral-tiny",
+        messages: [
+          {
+            role: "user",
+            content: `You are an expert at writing blogs.
+                      I want you to suggest 10 topics for this new blog with the following title: ${title}.
+                      The response must be a list of strings. Don't wrap each suggestion with quotes.`,
+          },
+        ],
       });
       setLoadingSuggestions(false);
       return chatResponse.choices[0].message.content;
