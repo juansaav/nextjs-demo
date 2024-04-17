@@ -12,8 +12,8 @@ const apiKey =
 const client = new MistralClient(apiKey);
 
 const NewPostStreaming = () => {
-  const title= "Exotic Fruit Tasting Experience";
-  const description= "Expand your palate with an exotic fruit tasting experience featuring unique and tropical flavors.";
+  const title= "Tips for Responsible Dog Ownership";
+  const description= "Ensure a happy and healthy life for your canine companion with these tips.";
   const [suggestedPosts, setSuggestedPosts] = useState([]);
 
   function splitIntoChunks(posts) {
@@ -95,10 +95,10 @@ const NewPostStreaming = () => {
   return (
     <Layout>
       <Head>
-        <title>Suggest new post using embeddings and chunks</title>
+        <title>Suggest related posts using embeddings and chunks</title>
       </Head>
       <div>
-        <h1 className={utilStyles.headingXl}>Suggest new post using embeddings and chunks</h1>
+        <h1 className={utilStyles.headingXl}>Suggest related posts using embeddings and chunks</h1>
           <div>
             <div style={{paddingBottom: 30}} >New post:</div>
           </div>

@@ -97,10 +97,10 @@ const SuggestTagsEmails = () => {
   return (
     <Layout>
       <Head>
-        <title>Create New Post, suggest tags and email list to share</title>
+        <title>Create New Post, suggest tags and mailing list to share</title>
       </Head>
       <div>
-        <h1 className={utilStyles.headingLg}>Create New Post, suggest tags and email list to share</h1>
+        <h1 className={utilStyles.headingLg}>Create New Post, suggest tags and mailing list to share</h1>
           <div>
             <label htmlFor="title">Title:</label>
             <input
@@ -141,7 +141,7 @@ const SuggestTagsEmails = () => {
             {
               suggestedUsers?.length > 0 && (
                 <div>
-                  <label>Suggested Emails to notify:</label>
+                  <label>Suggested Mailing to notify:</label>
                   <ul>
                     {suggestedUsers
                       .map((line, index) => (
